@@ -2,6 +2,7 @@ import json
 import requests
 from geopy import distance
 import folium
+from flask import Flask
 
 apikey = '2165c418-0c63-4111-8bfe-a6d7531cdb24'
 user_location = input('Где вы находитесь?\n')
@@ -68,3 +69,13 @@ for coffeeshop_index in range(5):
     ).add_to(coffeeshops_map)
 
 coffeeshops_map.save('map.html')
+
+
+def hello_world():
+    with open('map.html') as file:
+        return file.read()
+
+
+app = Flask(__name__)
+app.add_url_rule('/', 'hello', hello_world)
+app.run('0.0.0.0')
