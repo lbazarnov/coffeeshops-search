@@ -71,11 +71,11 @@ for coffeeshop_index in range(5):
 coffeeshops_map.save('map.html')
 
 
-def hello_world():
+def render_map():
     with open('map.html') as file:
         return file.read()
 
 
 app = Flask(__name__)
-app.add_url_rule('/', 'hello', hello_world)
+app.add_url_rule('/', 'Moscow Coffeshops Map', render_map)
 app.run('0.0.0.0')
