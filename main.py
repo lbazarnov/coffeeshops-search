@@ -19,8 +19,8 @@ def fetch_coordinates(apikey, place):
     return lat, lon
 
 
-def get_distance_to_coffeeshop(coffeeshops_list):
-    return coffeeshops_list['distance']
+def get_distance_to_coffeeshop(coffeeshops_info):
+    return coffeeshops_info['distance']
 
 
 def render_map():
@@ -37,7 +37,7 @@ def main():
     user_location = input('Где вы находитесь?\n')
     user_coordinates = fetch_coordinates(apikey, user_location)
 
-    coffeeshops_list = []
+    coffeeshops_info = []
     for coffeeshop in coffeeshops:
         coffeeshop_title = coffeeshop['Name']
         coffeeshop_longtitude = coffeeshop['Longitude_WGS84']
@@ -46,17 +46,17 @@ def main():
         distance_to_coffeeshop = distance.distance(
             user_coordinates, coffeeshop_coordinates).km
 
-        coffeeshop_dict = {
+        coffeeshops_details = {
             'title': coffeeshop_title,
             'distance': distance_to_coffeeshop,
             'longtitude': coffeeshop_longtitude,
             'latitude': coffeeshop_latitude
         }
 
-        coffeeshops_list.append(coffeeshop_dict)
+        coffeeshops_info.append(coffeeshop_dict)
 
     nearby_coffeeshops = sorted(
-        coffeeshops_list, key=get_distance_to_coffeeshop)[:NEAREST_BARS_AMOUNT]
+        coffeeshops_info, key=get_distance_to_coffeeshop)[:NEAREST_BARS_AMOUNT]
 
     coffeeshops_map = folium.Map(location=user_coordinates, zoom_start=16)
 
