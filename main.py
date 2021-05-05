@@ -4,6 +4,8 @@ from geopy import distance
 import folium
 from flask import Flask
 
+NEAREST_BARS_AMOUNT = 5
+
 
 def fetch_coordinates(apikey, place):
     base_url = 'https://geocode-maps.yandex.ru/1.x'
@@ -37,9 +39,6 @@ def main():
 
     coffeeshops_list = []
     for coffeeshop in coffeeshops:
-
-        coffeeshop_dict = {}
-
         coffeeshop_title = coffeeshop['Name']
         coffeeshop_longtitude = coffeeshop['Longitude_WGS84']
         coffeeshop_latitude = coffeeshop['Latitude_WGS84']
@@ -47,15 +46,17 @@ def main():
         distance_to_coffeeshop = distance.distance(
             user_coordinates, coffeeshop_coordinates).km
 
-        coffeeshop_dict['title'] = coffeeshop_title
-        coffeeshop_dict['distance'] = distance_to_coffeeshop
-        coffeeshop_dict['longtitude'] = coffeeshop_longtitude
-        coffeeshop_dict['latitude'] = coffeeshop_latitude
+        coffeeshop_dict = {
+            'title': coffeeshop_title,
+            'distance': distance_to_coffeeshop,
+            'longtitude': coffeeshop_longtitude,
+            'latitude': coffeeshop_latitude
+        }
 
         coffeeshops_list.append(coffeeshop_dict)
 
     nearby_coffeeshops = sorted(
-        coffeeshops_list, key=get_distance_to_coffeeshop)[:5]
+        coffeeshops_list, key=get_distance_to_coffeeshop)[:NEAREST_BARS_AMOUNT]
 
     coffeeshops_map = folium.Map(location=user_coordinates, zoom_start=16)
 
