@@ -1,8 +1,12 @@
 import json
 import requests
-from geopy import distance
 import folium
+import os
+from dotenv import load_dotenv
+from geopy import distance
 from flask import Flask
+
+load_dotenv()
 
 NEAREST_BARS_AMOUNT = 5
 
@@ -33,7 +37,7 @@ def main():
         file_content = my_file.read()
 
     coffeeshops = json.loads(file_content)
-    apikey = '2165c418-0c63-4111-8bfe-a6d7531cdb24'
+    apikey = os.getenv('APIKEY')
     user_location = input('Где вы находитесь?\n')
     user_coordinates = fetch_coordinates(apikey, user_location)
 
@@ -53,7 +57,7 @@ def main():
             'latitude': coffeeshop_latitude
         }
 
-        coffeeshops_info.append(coffeeshop_dict)
+        coffeeshops_info.append(coffeeshops_details)
 
     nearby_coffeeshops = sorted(
         coffeeshops_info, key=get_distance_to_coffeeshop)[:NEAREST_BARS_AMOUNT]
