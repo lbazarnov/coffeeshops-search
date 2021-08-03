@@ -2,11 +2,8 @@ import json
 import requests
 import folium
 import os
-from dotenv import load_dotenv
 from geopy import distance
 from flask import Flask
-
-load_dotenv()
 
 NEAREST_BARS_AMOUNT = 5
 
@@ -40,8 +37,8 @@ def get_coffeeshops_info():
         coffeeshop_longtitude = coffeeshop['Longitude_WGS84']
         coffeeshop_latitude = coffeeshop['Latitude_WGS84']
         coffeeshop_coordinates = [coffeeshop_latitude, coffeeshop_longtitude]
-        distance_to_coffeeshop = distance.distance(
-            user_coordinates, coffeeshop_coordinates).km
+        distance_to_coffeeshop = distance.distance(user_coordinates,
+                                                   coffeeshop_coordinates).km
 
         coffeeshops_details = {
             'title': coffeeshop_title,
@@ -60,8 +57,8 @@ def get_distance_to_coffeeshop(coffeeshops_info):
 
 
 def get_nearest_coffeeshops():
-    nearby_coffeeshops = sorted(coffeeshops_info, key=get_distance_to_coffeeshop)[
-        :NEAREST_BARS_AMOUNT]
+    nearby_coffeeshops = sorted(
+        coffeeshops_info, key=get_distance_to_coffeeshop)[:NEAREST_BARS_AMOUNT]
 
     return nearby_coffeeshops
 
@@ -70,12 +67,12 @@ def get_markers_on_map():
     coffeeshops_map = folium.Map(location=user_coordinates, zoom_start=16)
 
     for nearby_coffeeshop in nearby_coffeeshops:
-        folium.Marker(
-            location=[nearby_coffeeshop['latitude'],
-                      nearby_coffeeshop['longtitude']],
-            popup=nearby_coffeeshop['title'],
-            icon=folium.Icon(icon='coffee', prefix='fa', color='red')
-        ).add_to(coffeeshops_map)
+        folium.Marker(location=[
+            nearby_coffeeshop['latitude'], nearby_coffeeshop['longtitude']
+        ],
+                      popup=nearby_coffeeshop['title'],
+                      icon=folium.Icon(icon='coffee', prefix='fa',
+                                       color='red')).add_to(coffeeshops_map)
 
     return coffeeshops_map.save('map.html')
 
