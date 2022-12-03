@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<head>    
+<html>
+<head>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
         <script>
@@ -23,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_356cb96b4e404880b5e333d987cc2224 {
+                #map_ef5ea110ea537ed66f80ec17721087c6 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -33,17 +35,19 @@
             </style>
         
 </head>
-<body>    
+<body>
     
-            <div class="folium-map" id="map_356cb96b4e404880b5e333d987cc2224" ></div>
+    
+            <div class="folium-map" id="map_ef5ea110ea537ed66f80ec17721087c6" ></div>
         
 </body>
-<script>    
+<script>
     
-            var map_356cb96b4e404880b5e333d987cc2224 = L.map(
-                "map_356cb96b4e404880b5e333d987cc2224",
+    
+            var map_ef5ea110ea537ed66f80ec17721087c6 = L.map(
+                "map_ef5ea110ea537ed66f80ec17721087c6",
                 {
-                    center: [43.036057, 74.128887],
+                    center: [55.854891, 37.476231],
                     crs: L.CRS.EPSG3857,
                     zoom: 16,
                     zoomControl: true,
@@ -55,134 +59,172 @@
 
         
     
-            var tile_layer_49ce1f4df60849a2abb247cda4fd4bc3 = L.tileLayer(
+            var tile_layer_7084e56e98afcab0637a197d817ae63c = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var marker_a3494388890842edb6d5aeb13570e276 = L.marker(
-                [55.68483866045016, 37.85297637280588],
+            var marker_602533b766a380f83c5e8471a41da56f = L.marker(
+                [55.854891, 37.476231],
                 {}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var icon_da57a9b429d54d5dbd298fe8d84c7043 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            var icon_1dc9cdde3422fc6bcc78836695cff0fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "user", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_a3494388890842edb6d5aeb13570e276.setIcon(icon_da57a9b429d54d5dbd298fe8d84c7043);
+            marker_602533b766a380f83c5e8471a41da56f.setIcon(icon_1dc9cdde3422fc6bcc78836695cff0fb);
         
     
-        var popup_6e66d4a95f0445dfaefab578205f3671 = L.popup({"maxWidth": "100%"});
+        var popup_04000f94748bd6374f472004c04edbf6 = L.popup({"maxWidth": "100%"});
 
         
-            var html_d203ee3e621c4529be1622fc85d67120 = $(`<div id="html_d203ee3e621c4529be1622fc85d67120" style="width: 100.0%; height: 100.0%;">Чай, кофе, выпечка</div>`)[0];
-            popup_6e66d4a95f0445dfaefab578205f3671.setContent(html_d203ee3e621c4529be1622fc85d67120);
+            
+                var html_4834b534ab836def4fe05a4b028baf58 = $(`<div id="html_4834b534ab836def4fe05a4b028baf58" style="width: 100.0%; height: 100.0%;">Ваше местоположение</div>`)[0];
+                popup_04000f94748bd6374f472004c04edbf6.setContent(html_4834b534ab836def4fe05a4b028baf58);
+            
         
 
-        marker_a3494388890842edb6d5aeb13570e276.bindPopup(popup_6e66d4a95f0445dfaefab578205f3671)
+        marker_602533b766a380f83c5e8471a41da56f.bindPopup(popup_04000f94748bd6374f472004c04edbf6)
         ;
 
         
     
     
-            var marker_489c51983d134d4c8a2af351e69b7068 = L.marker(
-                [55.74351975379099, 37.86630799999999],
+            var marker_c09e68b0f23dd3e6744825ee870ce549 = L.marker(
+                [55.855181786334875, 37.47837400000001],
                 {}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var icon_899f32874f9845478427e222459e9422 = L.AwesomeMarkers.icon(
+            var icon_076d55e20c1fb0f694735a9396539b85 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_489c51983d134d4c8a2af351e69b7068.setIcon(icon_899f32874f9845478427e222459e9422);
+            marker_c09e68b0f23dd3e6744825ee870ce549.setIcon(icon_076d55e20c1fb0f694735a9396539b85);
         
     
-        var popup_1e07e5913b694fe2bcd121996307e37b = L.popup({"maxWidth": "100%"});
+        var popup_56fb389ba0d120f1b89f21c81535257d = L.popup({"maxWidth": "100%"});
 
         
-            var html_4967ad6889f942fda70b24f193bcfa7d = $(`<div id="html_4967ad6889f942fda70b24f193bcfa7d" style="width: 100.0%; height: 100.0%;">Кофе</div>`)[0];
-            popup_1e07e5913b694fe2bcd121996307e37b.setContent(html_4967ad6889f942fda70b24f193bcfa7d);
+            
+                var html_4e84c988ee6faa426c6b55644808a6a5 = $(`<div id="html_4e84c988ee6faa426c6b55644808a6a5" style="width: 100.0%; height: 100.0%;">Кофе</div>`)[0];
+                popup_56fb389ba0d120f1b89f21c81535257d.setContent(html_4e84c988ee6faa426c6b55644808a6a5);
+            
         
 
-        marker_489c51983d134d4c8a2af351e69b7068.bindPopup(popup_1e07e5913b694fe2bcd121996307e37b)
+        marker_c09e68b0f23dd3e6744825ee870ce549.bindPopup(popup_56fb389ba0d120f1b89f21c81535257d)
         ;
 
         
     
     
-            var marker_92fdd24b6133410a9e3ae360b01ac71a = L.marker(
-                [55.739172752530564, 37.85651500000001],
+            var marker_289a884f0e750c8f676659d042dc28b7 = L.marker(
+                [55.860483787888114, 37.483286],
                 {}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var icon_c72a0a03034149b4a54cdb511a7592d8 = L.AwesomeMarkers.icon(
+            var icon_f2af1378b1ee6e9c4ba2efe9b489963f = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_92fdd24b6133410a9e3ae360b01ac71a.setIcon(icon_c72a0a03034149b4a54cdb511a7592d8);
+            marker_289a884f0e750c8f676659d042dc28b7.setIcon(icon_f2af1378b1ee6e9c4ba2efe9b489963f);
         
     
-        var popup_ed50ba5b59ea4333a9a9f33a754d4edf = L.popup({"maxWidth": "100%"});
+        var popup_41a1baa163116b48b69926ebf2ae4d5c = L.popup({"maxWidth": "100%"});
 
         
-            var html_190d55a616de4100a8a429c84f9effa0 = $(`<div id="html_190d55a616de4100a8a429c84f9effa0" style="width: 100.0%; height: 100.0%;">Кофе</div>`)[0];
-            popup_ed50ba5b59ea4333a9a9f33a754d4edf.setContent(html_190d55a616de4100a8a429c84f9effa0);
+            
+                var html_0093f4ac00087ac6d17055a25de17fdd = $(`<div id="html_0093f4ac00087ac6d17055a25de17fdd" style="width: 100.0%; height: 100.0%;">Кофейня</div>`)[0];
+                popup_41a1baa163116b48b69926ebf2ae4d5c.setContent(html_0093f4ac00087ac6d17055a25de17fdd);
+            
         
 
-        marker_92fdd24b6133410a9e3ae360b01ac71a.bindPopup(popup_ed50ba5b59ea4333a9a9f33a754d4edf)
+        marker_289a884f0e750c8f676659d042dc28b7.bindPopup(popup_41a1baa163116b48b69926ebf2ae4d5c)
         ;
 
         
     
     
-            var marker_ef4ef4f72c204f599025245f7f4dd91d = L.marker(
-                [55.73324075081132, 37.85133299999999],
+            var marker_a9d686f3a70e895817a61d006d5aef4c = L.marker(
+                [55.86082678798862, 37.48343599999999],
                 {}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var icon_ce86710df7394cb58a1d8d4fb8916f62 = L.AwesomeMarkers.icon(
+            var icon_29f14b88f7a6a2867d0df143f2576b7a = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_ef4ef4f72c204f599025245f7f4dd91d.setIcon(icon_ce86710df7394cb58a1d8d4fb8916f62);
+            marker_a9d686f3a70e895817a61d006d5aef4c.setIcon(icon_29f14b88f7a6a2867d0df143f2576b7a);
         
     
-        var popup_4681f5eca49a4184a04a36547cfe1313 = L.popup({"maxWidth": "100%"});
+        var popup_103398d5ffdf813f90c12d7cd805eba0 = L.popup({"maxWidth": "100%"});
 
         
-            var html_775e463b48b044909716e63c96fb1fb8 = $(`<div id="html_775e463b48b044909716e63c96fb1fb8" style="width: 100.0%; height: 100.0%;">Кофейня «Семейная кофейня»</div>`)[0];
-            popup_4681f5eca49a4184a04a36547cfe1313.setContent(html_775e463b48b044909716e63c96fb1fb8);
+            
+                var html_59fa9dcdbffe907431e955fe8dc88790 = $(`<div id="html_59fa9dcdbffe907431e955fe8dc88790" style="width: 100.0%; height: 100.0%;">Кофе с собой</div>`)[0];
+                popup_103398d5ffdf813f90c12d7cd805eba0.setContent(html_59fa9dcdbffe907431e955fe8dc88790);
+            
         
 
-        marker_ef4ef4f72c204f599025245f7f4dd91d.bindPopup(popup_4681f5eca49a4184a04a36547cfe1313)
+        marker_a9d686f3a70e895817a61d006d5aef4c.bindPopup(popup_103398d5ffdf813f90c12d7cd805eba0)
         ;
 
         
     
     
-            var marker_e45e84e70e474ee9919b03579ebf2c50 = L.marker(
-                [55.72404500689012, 37.8251433778232],
+            var marker_15185cc5c81f9d6559c7a4e0d8428462 = L.marker(
+                [55.86417837820681, 37.474406506303865],
                 {}
-            ).addTo(map_356cb96b4e404880b5e333d987cc2224);
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
         
     
-            var icon_0488a9b5bf1c495993600aacc76e7560 = L.AwesomeMarkers.icon(
+            var icon_7ca0bdd8fbc1f597f4c9f2313de55b75 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
             );
-            marker_e45e84e70e474ee9919b03579ebf2c50.setIcon(icon_0488a9b5bf1c495993600aacc76e7560);
+            marker_15185cc5c81f9d6559c7a4e0d8428462.setIcon(icon_7ca0bdd8fbc1f597f4c9f2313de55b75);
         
     
-        var popup_268250c3aaed4cfb89836a9c50f36144 = L.popup({"maxWidth": "100%"});
+        var popup_35c22900ac1ee3f6fdbea7bd1df1a2b4 = L.popup({"maxWidth": "100%"});
 
         
-            var html_3da74fc44d354260aa765128bb387461 = $(`<div id="html_3da74fc44d354260aa765128bb387461" style="width: 100.0%; height: 100.0%;">Кофе с собой</div>`)[0];
-            popup_268250c3aaed4cfb89836a9c50f36144.setContent(html_3da74fc44d354260aa765128bb387461);
+            
+                var html_b7f05df606ad34eb479c80629360d98d = $(`<div id="html_b7f05df606ad34eb479c80629360d98d" style="width: 100.0%; height: 100.0%;">Coffee Good</div>`)[0];
+                popup_35c22900ac1ee3f6fdbea7bd1df1a2b4.setContent(html_b7f05df606ad34eb479c80629360d98d);
+            
         
 
-        marker_e45e84e70e474ee9919b03579ebf2c50.bindPopup(popup_268250c3aaed4cfb89836a9c50f36144)
+        marker_15185cc5c81f9d6559c7a4e0d8428462.bindPopup(popup_35c22900ac1ee3f6fdbea7bd1df1a2b4)
+        ;
+
+        
+    
+    
+            var marker_e85f8575d57d78872211060b2deaf0a1 = L.marker(
+                [55.8508462349835, 37.4954465763789],
+                {}
+            ).addTo(map_ef5ea110ea537ed66f80ec17721087c6);
+        
+    
+            var icon_92ae21ce5930ccb3e895e4f6f1c8e148 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e85f8575d57d78872211060b2deaf0a1.setIcon(icon_92ae21ce5930ccb3e895e4f6f1c8e148);
+        
+    
+        var popup_dc74abf1acd81654b33b1ec2b8498ff1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b39462c72e2fb08749118557fdc54000 = $(`<div id="html_b39462c72e2fb08749118557fdc54000" style="width: 100.0%; height: 100.0%;">Кофейный бар</div>`)[0];
+                popup_dc74abf1acd81654b33b1ec2b8498ff1.setContent(html_b39462c72e2fb08749118557fdc54000);
+            
+        
+
+        marker_e85f8575d57d78872211060b2deaf0a1.bindPopup(popup_dc74abf1acd81654b33b1ec2b8498ff1)
         ;
 
         
     
 </script>
+</html>
