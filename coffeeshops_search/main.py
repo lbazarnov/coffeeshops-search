@@ -93,14 +93,18 @@ def run_webserver(host='0.0.0.0', port=5000):
 
 def main():
     load_dotenv()
-    api_key = os.getenv('APIKEY')
-    user_location = input('Введите ваше местоположение: ')
-    user_coordinates = fetch_coordinates(api_key, user_location)
-    coffeeshops_list = load_file('coffee.json')
-    coffeeshops = get_coffeeshops_coordinates(coffeeshops_list, user_coordinates)  # noqa: 501
-    nearby_coffeeshops = get_nearby_coffeeshops(coffeeshops)
-    get_markers_on_map(user_coordinates, nearby_coffeeshops)
-    run_webserver()
+    apikey = os.environ['GEOCODER_API_KEY']
+    if apikey is not None:
+        try:
+            user_location = input('Введите ваше местоположение: ')
+            user_coordinates = fetch_coordinates(apikey, user_location)
+            coffeeshops_list = load_file('coffee.json')
+            coffeeshops = get_coffeeshops_coordinates(coffeeshops_list, user_coordinates)  # noqa: 501
+            nearby_coffeeshops = get_nearby_coffeeshops(coffeeshops)
+            get_markers_on_map(user_coordinates, nearby_coffeeshops)
+            run_webserver()
+        except requests.exceptions.HTTPError as error:
+            print(error)
 
 
 if __name__ == '__main__':

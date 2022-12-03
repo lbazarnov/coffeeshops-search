@@ -17,7 +17,7 @@
     ```bash
     $ сd coffeeshops-search
     $ touch .env
-    $ echo 'APIKEY=вставьте_ваш_ключ_сюда' > .env
+    $ echo 'GEOCODER_API_KEY=вставьте_ваш_ключ_сюда' > .env
     ```
 
 3. Последовательно запустить несколько команд
