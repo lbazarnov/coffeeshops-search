@@ -7,23 +7,29 @@
 После этого необходимо:
 
 1. Склонировать репозиторий к себе на компьютер
-   ```bash
-   $ git clone https://github.com/lbazarnov/coffeeshops-search.git
-   ```
+
+    ```bash
+    $ git clone https://github.com/lbazarnov/coffeeshops-search.git
+    ```
+
 2. Создать файл для переменных окружения `.env`, поместив туда ваш ключ API Яндекс.Карт
 
-  ```bash
-  $ сd coffeeshops-search
-  $ touch .env
-  $ echo 'APIKEY=вставьте_ваш_ключ_сюда' > .env
-  ```
+    ```bash
+    $ сd coffeeshops-search
+    $ touch .env
+    $ echo 'APIKEY=вставьте_ваш_ключ_сюда' > .env
+    ```
+
 3. Последовательно запустить несколько команд
-  ```bash
+
+    ```bash
     $ make install # Для установки зависимостей проекта
     $ make build # Для сборки проекта
     $ make package-install # Для установки скрипта на компьютер
     ```
+
 4. Запустить скрипт командой
+
     ```bash
     $ coffeeshops-search
     ```
